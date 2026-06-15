@@ -5,11 +5,15 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  static final GlobalKey<ScaffoldMessengerState> _scaffoldMessengerKey =
+      GlobalKey<ScaffoldMessengerState>();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Day 1 Profile Card',
       debugShowCheckedModeBanner: false,
+      scaffoldMessengerKey: _scaffoldMessengerKey,
       home: Scaffold(
         backgroundColor: Colors.blueGrey.shade50,
         appBar: AppBar(
@@ -67,7 +71,13 @@ class MyApp extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _scaffoldMessengerKey.currentState?.showSnackBar(
+                      const SnackBar(
+                        content: Text('Thank you for viewing my profile!'),
+                      ),
+                    );
+                  },
                   child: const Text('Contact Me'),
                 ),
               ],
