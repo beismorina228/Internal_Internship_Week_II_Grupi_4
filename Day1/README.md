@@ -1,19 +1,31 @@
-# Hello World
+# Internal Internship - Day 1
 
-A new Flutter project created with FlutLab - https://flutlab.io
+This Flutter project contains both Day 1 assignments.
 
-## Getting Started
+## Task 1: Profile Card
 
-A few resources to get you started if this is your first Flutter project:
+The original profile card and its Contact Me SnackBar are preserved in
+`lib/task1/profile_card_app.dart`.
 
-- https://flutter.dev/docs/get-started/codelab
-- https://flutter.dev/docs/cookbook
+Run Task 1 with:
 
-For help getting started with Flutter, view our
-https://flutter.dev/docs, which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter run -t lib/task1/profile_card_app.dart
+```
 
-## Getting Started: FlutLab - Flutter Online IDE
+## Task 2: Grade Calculator
 
-- How to use FlutLab? Please, view our https://flutlab.io/docs
-- Join the discussion and conversation on https://flutlab.io/residents
+The default app is a grade calculator with three numeric inputs. Pressing
+**Calculate Average** validates that every field is filled and contains a valid
+number. Validation errors are displayed in a SnackBar.
+
+When the inputs are valid, the app adds the three grades, divides the total by
+three, and displays the average with exactly two decimal places. An average of
+50 or higher displays **Kalon**; a lower average displays
+**Duhet përmirësim**.
+
+Run Task 2 with:
+
+```bash
+flutter run
+```
